@@ -47,14 +47,14 @@ This should be a series of images from multiple angles of a to scale model of yo
 
 ## Teammates and Responsibilities
 
-### Name 1
-Each name should include a brief one paragraph descriptions of the teammates primary responsibilities. 
+### Samuel (Software Engineer)
+Sam will work on the algorithm, most likely flood fill. He will write it in Java and will translate it in the future into C. He will also work on programming the robot as well as possibly doing things such as speed tuning with algorithms including PID and feed-forward algorithms. 
 
-### Name 2     
-Will manage the power supply circuitry and the motor control circuitry. Responsible for ensuring that the Arduino and motor controllers are both properly powered from the battery but are on separate circuits with the proper voltages and currents. 
+### Dylan (Electrical/Mechanical Engineer)
+Dylan will work on creating the pcb 
 
-### Name 3
-...
+### Peter (Electrical/Mechanical Engineer)
+Peter will work on creating the pcb
 
 ## Milestones
 
