@@ -94,7 +94,7 @@ This should be a series of images from multiple angles of a to scale model of yo
 Sam will work on the algorithm, most likely flood fill. He will write it in Java and will translate it in the future into C. He will also work on programming the robot as well as possibly doing things such as speed tuning with algorithms including PID and feed-forward algorithms. 
 
 ### Dylan (Electrical/Mechanical Engineer)
-Dylan will work on creating the pcb 
+Dylan will work on designing and creating the pcb and the physical hardware on the board. Includes placement of components, CAD drawings (using freecad). 
 
 ### Peter (Electrical/Mechanical Engineer)
 Peter will work on creating the pcb
