@@ -1,8 +1,9 @@
-# Micromouse_Proposal_Example
+# PCB mouse proposal
+(still thinking of a name)
 
 ## Overview
 
-The overview should be a general description of your project. This should be a high level overview of your design decisions and how you will implement them, including detailed information on how you will handle difficulties such as software and hardware integration. This should also contain information on the hardware including references to the electrical requirements of all the individual components of your system and how those requirements will be managed. You should also discuss what kind of software you will be running, undergo a brief analysis to show you have the compute power to run your software, and discuss how the software will use the inputs your hardware gives it to complete its task. 
+The body of the mouse will consist of the PCB that contains the electrical circuit and 3D printed motor housing and driver components. The microcontroller board that is used will be a RP2040 that uses an external 12MHz clock. Current difficulties include dimension specifications as some housing components are close to colliding with circuit components. This leaves us with some tight tolerances at times and the reccommended course of action is to respecify some dimensions. Currently the mouse is 10cm X 9cm X 3.2cm which is well under the size requirement but needs to be kept small as our team wishes to give our mouse the ability to create diagonals
 
 ### Software Plan
 The search algorithm will be made in Java. Once this search algorithm has been finalized, it will be translated to C for the robot. The robot itself will also be coded in C for the sake of memory and speed efficiency. The search algorithm will be tested in the simulation as well as in real life with the robot. VS Code will likely be the main IDE used. We will use different hardware inputs such as infared sensors, gyro, and encoders to deteremine location, distance, acceleration, and speed. 
@@ -23,7 +24,9 @@ A battery voltage has not yet been determined, although anywhere in the 5-9V ran
 
 ## Flowchart of System Design
 
-Please include a flowchart of your system design. This should include the hardware and software components of your system and how they interact with each other. This should be a high level overview of your system. We recommend using a flowchart design software such as [draw.io](https://app.diagrams.net/) or [Lucidchart](https://www.lucidchart.com/pages/). However, you can also use any other software or even draw it by hand and take a picture of it. Simple programs such as Google Drawings or Microsoft Paint or Microsoft Office will also work. 
+Needs to be made better but the simple version is the microcontroler recieves input data from its sensors (IMU, and infared) as well from the encoder. It processes this data and sends pulses to the motor controller which in turn sends a voltage to the motors.
+
+![alt text](Flowchart.png "Crude flowchart of system design")
 
 ## Parts and Costs
 
@@ -86,7 +89,8 @@ Please include a flowchart of your system design. This should include the hardwa
 
 ## 3D Model
 
-This should be a series of images from multiple angles of a to scale model of your robot that includes all major physical components (small components such as fundamental circuit components and wires can be omitted). You may use whatever method of creating this model as long as it is to scale. We recommend using 3D CAD programs such as Autodesk Inventor or Fusion 360. You may also use physical prototyping methods such as foam-core, cardboard, clay, or even Lego. The most important thing is that you get a real-world representation of the actual size of your components in relation to each other. As such, this model does not need to be detailed, as long as the size and shape of parts are correct. 
+![alt text](CADscreenshot.png "Orthographic view")
+![alt text](KiCadscreenshot.png "PCB layout")
 
 ## Teammates and Responsibilities
 
@@ -94,33 +98,36 @@ This should be a series of images from multiple angles of a to scale model of yo
 Sam will work on the algorithm, most likely flood fill. He will write it in Java and will translate it in the future into C. He will also work on programming the robot as well as possibly doing things such as speed tuning with algorithms including PID and feed-forward algorithms. 
 
 ### Dylan (Electrical/Mechanical Engineer)
-Dylan will work on designing and creating the pcb and the physical hardware on the board. Includes placement of components, CAD drawings (using freecad). 
+Dylan will work on designing the PCB and Hardware that interacts with mechanical components such as the encoders, motor and wheel mount assemblies. He will also assist with converting algorithms designed in java to C. And the control system involved in processing feedback from the motor and IR sensors as well as processing signals from the other onboard sensing devices and sending the motors commands. 
 
 ### Peter (Electrical/Mechanical Engineer)
 Peter will work on creating the pcb
 
 ## Milestones
 
-### Milestone Set 1: 11/15/23
+### Milestone Set 1: 11/07/23
+* Design of PCB and encoders finalized
 * understand all the code in the simulation repository
 * research and start to implement the flood fill algorithm
 
-### Milestone Set 2: 11/22/23
-* get the search algorithm working in simulation
+### Milestone Set 2: 11/14/23
+* Motor/wheel mount sub-assembly design finalized
 
-### Milestone Set 3: 11/29/23
-* mouse hardware is programmed
-* the mouse can move in a straight line and make 90 degree turns
-* mouse can sense surroundings
+### Milestone Set 3: 12/11/23
+* Mouse fully assembled and One maze solving algo complete
 
-### Milestone Set 4: 1/10/24
-* mouse can solve the maze
+### Milestone Set 4: 12/31/23
+* Mouse can finish maze with static turning and movement
+* Controls systems implemented
 
 ### Milestone Set 5: 1/24/24
-* mouse can make smooth turns and perform diagonals
+* mouse can finish maze with continuous movement
 
-### Milestone Set 6: 2/7/24
-* introduce speed tuning such as PID 
+### Milestone Set 6: 2/12/24
+* Mouse can complete maze using diagonals
+* Mouse is ready to compete for E-week
+* Introduce speed tuning such as PID 
 
-
+### Milestone Set 7: 3/1/24
+* Mouse is competition ready
 
